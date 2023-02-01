@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&display=swap');
+
+body {
+  margin: 0;
+  color: #f8f8f2;
+  background-color: #282a36;
+  font-family: 'Do Hyeon', cursive;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
