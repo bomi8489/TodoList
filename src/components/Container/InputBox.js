@@ -7,7 +7,7 @@ import {
 } from "../Presenter/InputboxPresenter"
 import PropTypes from "prop-types"
 
-function InputBox({ listvalue, onChange, onCreate }) {
+const InputBox = React.memo(function InputBox({ listvalue, onChange, onCreate }) {
     return (
         <Inputbox>
             <Subtitle>아래 입력칸에 오늘 할일을 입력해주세요</Subtitle>
@@ -23,7 +23,7 @@ function InputBox({ listvalue, onChange, onCreate }) {
 
         </Inputbox>
     )
-}
+})
 
 InputBox.prototype = {
     listvalue: PropTypes.string.isRequired,

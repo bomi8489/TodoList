@@ -21,7 +21,7 @@ function printID(todoList){
     console.log(todoList.listvalue);
 }
 
-function InputList({ todoLists, onRemove }) {
+const InputList = React.memo(function InputList({ todoLists, onRemove }) {
     return (
         <>
             {todoLists.map(todoList => (
@@ -29,7 +29,7 @@ function InputList({ todoLists, onRemove }) {
             ))}
         </>
     )
-}
+})
 
 InputList.prototype = {
     todoLists: PropTypes.array,

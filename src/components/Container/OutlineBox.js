@@ -1,6 +1,7 @@
 import React from "react"
 import ContainerBox from "./ContainerBox"
 import InputBox from "./InputBox"
+import AdditionalBox from "./AdditionalBox"
 import Todolist from "../Presenter/TodolistPresenter"
 import PropTypes from "prop-types"
 
@@ -16,6 +17,9 @@ function OutlineBox({ listvalue, todoLists, onChange, onCreate, onRemove }) {
                 onChange={onChange}
                 onCreate={onCreate}
             />
+            <AdditionalBox
+
+            />
         </Todolist>
     )
 }
@@ -27,4 +31,4 @@ OutlineBox.prototype = {
     onRemove: PropTypes.func.isRequired,
 };
 
-export default OutlineBox
+export default React.memo(OutlineBox)

@@ -28,4 +28,4 @@ ContainerBox.prototype = {
     onRemove: PropTypes.func.isRequired,
 }
 
-export default ContainerBox;
+export default React.memo(ContainerBox);

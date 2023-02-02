@@ -3,6 +3,7 @@ import './App.css';
 import OutlineBox from "./components/Container/OutlineBox";
 
 function App() {
+  
   // 입력창 상태 관리
   const [inputs, setInputs] = useState({
     listvalue: ''
@@ -24,7 +25,7 @@ function App() {
       return (savedtodo !== null) ? JSON.parse(savedtodo) : [""]
     }
   });
-
+  
   const nextId = useRef(0);
   const onCreate = useCallback ( e => {
     e.preventDefault();
