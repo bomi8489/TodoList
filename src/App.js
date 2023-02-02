@@ -58,6 +58,30 @@ function App() {
     window.localStorage.setItem("todo", JSON.stringify(todoLists))
   }, [todoLists])
 
+  // 24시간
+  function get24Clock() {
+    const date = new Date();
+    let hours = date.getHours();
+    const minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+    hours = (hours < 10) ? `0` + `${hours}` : `${hours}`;
+    seconds = (seconds < 10) ? `0` + `${seconds}` : `${seconds}`;
+    let timer24 = `${hours}:${minutes<10?`0${minutes}:${seconds}`:`${minutes}:${seconds}`}`;
+    return timer24
+  }
+  // 12시간
+  function getAMPMClock() {
+    const date = new Date();
+    let hours = date.getHours();
+    const minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+    const AmOrPm = hours>=12? 'PM' : "AM";
+    hours = (hours%12)||12;
+    seconds = (seconds < 10) ? `0` + `${seconds}` : `${seconds}`
+    let timerAmpm = `${hours}:${minutes<10?`0${minutes}:${seconds}`:`${minutes}:${seconds}`} ${AmOrPm}`;
+    return timerAmpm
+  }
+
   return (
     <OutlineBox 
       listvalue={listvalue}
@@ -65,6 +89,8 @@ function App() {
       onChange={onChange}
       onCreate={onCreate}
       onRemove={onRemove}
+      clock24={get24Clock}
+      clockAmpm={getAMPMClock}
     />
   );
 }

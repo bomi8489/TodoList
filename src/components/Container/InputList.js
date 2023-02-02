@@ -9,7 +9,6 @@ import PropTypes from "prop-types"
 const ListBox = React.memo(function ListBox({ todoList, onRemove }) {
     //printID(todoList)
     return(
-        
         <Inputlist>
             <Contentsvalue>{todoList.listvalue}</Contentsvalue>
             <Button onClick={() => onRemove(todoList.id)}>삭제</Button>

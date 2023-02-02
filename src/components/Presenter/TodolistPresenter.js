@@ -5,7 +5,7 @@ width: 50vw;
 height: 100%;
 border: solid 5px #bd93f9;
 border-radius: 15px;
-margin-top: 15%;
+margin-top: 10%;
 margin-left: auto;
 margin-right: auto;
 text-align: center;

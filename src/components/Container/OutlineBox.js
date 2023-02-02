@@ -5,9 +5,13 @@ import AdditionalBox from "./AdditionalBox"
 import Todolist from "../Presenter/TodolistPresenter"
 import PropTypes from "prop-types"
 
-function OutlineBox({ listvalue, todoLists, onChange, onCreate, onRemove }) {
+function OutlineBox({ listvalue, todoLists, onChange, onCreate, onRemove, clock24, clockAmpm }) {
     return (
         <Todolist>
+            <AdditionalBox
+                clock24={clock24}
+                clockAmpm={clockAmpm}
+            />
             <ContainerBox
                 todoLists={todoLists}
                 onRemove={onRemove}
@@ -16,9 +20,6 @@ function OutlineBox({ listvalue, todoLists, onChange, onCreate, onRemove }) {
                 listvalue={listvalue}
                 onChange={onChange}
                 onCreate={onCreate}
-            />
-            <AdditionalBox
-
             />
         </Todolist>
     )
