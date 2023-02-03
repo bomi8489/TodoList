@@ -1,18 +1,10 @@
 import React from "react";
-import { 
-    ClockBox,
-    Clock24Box,
-    ClockAmpmBox,
- } from "../Presenter/AdditionalBoxPresenter";
-
-
-function AdditionalBox( clock24, clockAmpm ) {
+import ClockBox from "./ClockBox";
+  
+function AdditionalBox() {
     return (
-        <ClockBox>
-            <Clock24Box></Clock24Box>
-            {/* <ClockAmpmBox>{clockAmpm}</ClockAmpmBox> */}
-        </ClockBox>
+        <ClockBox/>
     )
 }
 
-export default AdditionalBox;
+export default React.memo(AdditionalBox);
