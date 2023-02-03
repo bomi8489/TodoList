@@ -5,8 +5,9 @@ import {
  } from "../Presenter/ClockBoxPresenter";
   
 function ClockBox() {
-    const [time, setTime] = React.useState('');
+    const nowdate = new Date().toLocaleTimeString();
     const date = new Date();
+    const [time, setTime] = React.useState([nowdate]);
 
     useInterval(() => {
         setTime(date.toLocaleTimeString());
