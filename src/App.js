@@ -4,6 +4,19 @@ import OutlineBox from "./components/Container/OutlineBox";
 
 function App() {
   
+  const images = [
+    '1.jpg', 
+    '2.jpg', 
+    '3.jpg',
+    '4.jpg',
+    '5.jpg',
+    '6.jpg',
+    '7.jpg',
+  ];
+  
+  const chosenImage = images[Math.floor(Math.random() + images.length-1)];
+  const bgImg = `url(../public/backgroundImg/${chosenImage})`;
+
   // 입력창 상태 관리
   const [inputs, setInputs] = useState({
     listvalue: ''
@@ -71,4 +84,4 @@ function App() {
   );
 }
 
-export default App;
+export default React.memo(App);

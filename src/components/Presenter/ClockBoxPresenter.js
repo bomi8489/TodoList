@@ -20,7 +20,6 @@ display: inline-block
 const SwitchInput = styled.input`
 position: absolute;
 appearance: none;
-background: ${props => props.checked ? 'black' : 'white'}
 &:checked{
     background: #e55;
     left: 33px;
@@ -33,13 +32,13 @@ const SwitchInputLabel = styled.label`
 position: relative;
 cursor: pointer;
 display: inline-block;
-width: 58px;
+width: 29px;
 height: 28px;
-background: #fff;
+background: none;
 margin-left: 1.5vw;
 margin-bottom: 1vh;
 border: 2px solid #daa;
-border-radius: 20px;
+border-radius: 10px;
 transition: 0.2s;
 
 &:hover{

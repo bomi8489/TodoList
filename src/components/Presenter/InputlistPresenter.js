@@ -22,7 +22,7 @@ border: 0;
 
 const Contentsvalue = styled.div`
 flex-grow: 1;
-font-size: 1rem;
+font-size: 1.5rem;
 `
 
 export { Inputlist, Button, Contentsvalue };

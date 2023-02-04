@@ -5,7 +5,7 @@ import AdditionalBox from "./AdditionalBox"
 import Todolist from "../Presenter/TodolistPresenter"
 import PropTypes from "prop-types"
 
-function OutlineBox({ listvalue, todoLists, onChange, onCreate, onRemove, }) {
+function OutlineBox({ listvalue, todoLists, onChange, onCreate, onRemove }) {
     return (
         <Todolist>
             <AdditionalBox

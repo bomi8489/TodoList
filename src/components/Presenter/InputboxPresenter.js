@@ -18,6 +18,11 @@ font-weight: bold;
 font-size: 1.5rem;
 width: 70%;
 height: 30px;
+background: none;
+border-left-width:0;
+border-right-width:0;
+border-top-width:0;
+border-bottom-width:1;
 `
 
 const Button = styled.button`
