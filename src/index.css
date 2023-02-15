@@ -5,6 +5,9 @@ body {
   color: #f8f8f2;
   background-color: #282a36;
   font-family: 'Do Hyeon', cursive;
+  background-image: url("../public/backgroundImg/7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {

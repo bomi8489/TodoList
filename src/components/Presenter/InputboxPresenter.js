@@ -23,6 +23,7 @@ border-left-width:0;
 border-right-width:0;
 border-top-width:0;
 border-bottom-width:1;
+color: #f8f8f2;
 `
 
 const Button = styled.button`
