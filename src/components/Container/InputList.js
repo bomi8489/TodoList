@@ -7,7 +7,6 @@ import {
 import PropTypes from "prop-types"
 
 const ListBox = React.memo(function ListBox({ todoList, onRemove }) {
-    //printID(todoList)
     return(
         <Inputlist>
             <Contentsvalue>{todoList.listvalue}</Contentsvalue>
@@ -15,10 +14,6 @@ const ListBox = React.memo(function ListBox({ todoList, onRemove }) {
         </Inputlist>
     )
 })
-
-function printID(todoList){
-    console.log(todoList.listvalue);
-}
 
 const InputList = React.memo(function InputList({ todoLists, onRemove }) {
     return (

@@ -9,6 +9,7 @@ function App() {
   });
   
   const { listvalue } = inputs;
+  
   const onChange = useCallback ( e => {
     const { value } = e.target;
     setInputs(inputs => ({
@@ -32,13 +33,15 @@ function App() {
   });
   
   const nextId = useRef(savedId);
+
+  // todo 생성함수
   const onCreate = useCallback ( e => {
     e.preventDefault();
     const todoList = {
       id: nextId.current,
       listvalue
     };
-    setTodoLists([...todoLists, todoList]);
+    setTodoLists(todoLists => [...todoLists, todoList]);
 
     setInputs({
       listvalue: ''
@@ -52,7 +55,7 @@ function App() {
   }, []);
 
 
-  // 리스트 저장함수
+  // 로컬스토리지 저장함수
   useEffect(() => { 
     window.localStorage.setItem("todo", JSON.stringify(todoLists))
   }, [todoLists])
